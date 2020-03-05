@@ -26,6 +26,11 @@ zuul:
       serviceId: blog-service
       sensitiveHeaders:
 
+    bike-service:
+      path: /bikeapi/**
+      serviceId: bike-service
+      sensitiveHeaders:
+
 server:
   port: 5000
 

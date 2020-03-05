@@ -1,5 +1,5 @@
 server:
-  port: 8763
+  port: 8750
 
 spring:
   zipkin:
@@ -14,7 +14,12 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
+management:
+  security:
+    enabled: false
+security:
+  basic:
+    enabled: false
 #  rabbitmq:
 #    host: localhost
 #    port: 5672

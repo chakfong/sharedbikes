@@ -47,7 +47,7 @@ public class UserController {
     @PreAuthorize("hasRole('USER')")
     @SysLogger("getUserInfo")
    // @PreAuthorize("hasAnyAuthority('ROLE_USER')")
-    public RespDTO getUserInfo(@PathVariable("username") String username){
+    public RespDTO getUser(@PathVariable("username") String username){
         //参数判读省略
         User user=  userService.getUserInfo(username);
         return RespDTO.onSuc(user);

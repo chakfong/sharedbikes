@@ -47,7 +47,7 @@ http://www.cnerlang.com/resource/182.html
 它可以查看每个请求在微服务系统中的链路关系
 * 5.聚合监控服务：module_admin
 提供了非常强大的服务监控功能，可以查看每个向注册中心注册服务的健康状态， 日志、注册时间等
-* 6.Turbine聚合监控服务：module_monitor
+* 6.Turbine聚合监控服务：module_monitor    
 它聚合了 module_user和module_blog的Hystrix Dashboard ，可以查看这两个服务熔断器的监控状况
 * 7.认证授权服务：module_uaa
 Spring Cloud 0Auth2 由这个服务统一授权并返回Token。其他的应用服务例如module_user和module_blog作为资源服务 API 接口资源受保护的，需要验证Token并鉴后才能访问，我采用的0Auth2+JWT安全认证，需要生成私钥用于加密，公钥用于解密
