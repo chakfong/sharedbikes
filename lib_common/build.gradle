@@ -15,4 +15,5 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-amqp'
     compile 'com.alibaba:fastjson:1.2.31'
     compile 'org.locationtech.spatial4j:spatial4j:0.6'
+    compile 'org.redisson:redisson:3.12.4'
 }

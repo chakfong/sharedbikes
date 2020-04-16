@@ -72,3 +72,8 @@ fabric.properties
 
 README.md
 LICENSE
+module_config/src/main/resources/shared
+
+**/build
+
+./gradle

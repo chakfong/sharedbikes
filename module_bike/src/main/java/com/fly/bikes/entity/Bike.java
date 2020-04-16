@@ -6,6 +6,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Date;
 
 
@@ -39,6 +40,58 @@ public class Bike implements Serializable {
     @CreatedDate
     @Column(name = "createTime")
     private Date createTime;
+
+    public enum BikeStatus {
+
+        Default(0, "default","default"),
+
+        Available(1, "available", "The bike is ready to take"),
+
+        Using(2, "using", "The bike is in use"),
+
+        Cancel(3, "cancel", "The bike is canceled");
+
+        private Integer value;
+        private String status;
+        private String description;
+
+        public Integer getValue() {
+            return value;
+        }
+
+        public void setValue(Integer value) {
+            this.value = value;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
+        BikeStatus(Integer value, String status, String description) {
+            this.value = value;
+            this.status = status;
+            this.description = description;
+        }
+
+        public static BikeStatus get(Integer value){
+            return Arrays.stream(BikeStatus.values())
+                    .filter(bikeStatus -> bikeStatus.value.equals(value))
+                    .findFirst()
+                    .get();
+        }
+    }
 
     public Bike() {
     }

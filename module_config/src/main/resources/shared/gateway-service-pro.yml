@@ -31,6 +31,8 @@ zuul:
       serviceId: bike-service
       sensitiveHeaders:
 
+
+
 server:
   port: 5000
 

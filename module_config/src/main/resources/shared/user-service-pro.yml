@@ -11,7 +11,7 @@ spring:
 #    port: 5672
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://47.107.149.16:3306/sharedbikes?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    url: jdbc:mysql://47.107.149.16:3305/sharedbikes?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
     username: root
     password: 123456
   jpa:
