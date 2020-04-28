@@ -76,4 +76,4 @@ module_config/src/main/resources/shared
 
 **/build
 
-./gradle
+.gradle/

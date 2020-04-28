@@ -8,13 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 
-/**
- * Description: <LoggerService><br>
- * Author:    mxdl<br>
- * Date:      2019/2/19<br>
- * Version:    V1.0.0<br>
- * Update:     <br>
- */
+
 @Service
 public class LoggerService {
 

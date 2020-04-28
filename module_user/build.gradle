@@ -1,5 +1,6 @@
 dependencies {
     compile project(':lib_common')
+    compile 'com.squareup.okhttp3:okhttp:3.3.0'
 }
 jar {
     manifest {

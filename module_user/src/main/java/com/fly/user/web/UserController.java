@@ -2,6 +2,7 @@ package com.fly.user.web;
 
 import com.fly.common.annotation.SysLogger;
 import com.fly.common.dto.RespDTO;
+import com.fly.user.dto.request.UserLoginReq;
 import com.fly.user.entity.User;
 import com.fly.user.service.UserService;
 import com.fly.user.util.BPwdEncoderUtils;
@@ -10,14 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * Description: <UserController><br>
- * Author:    mxdl<br>
- * Date:      2019/2/19<br>
- * Version:    V1.0.0<br>
- * Update:     <br>
- */
+
 @RestController
+@CrossOrigin
 @RequestMapping("/user")
 public class UserController {
 
@@ -26,7 +22,7 @@ public class UserController {
 
     @ApiOperation(value = "注册", notes = "username和password为必选项")
     @PostMapping("/registry")
-    @SysLogger("registry")
+//    @SysLogger("registry")
     public User createUser(@RequestBody User user){
         //参数判读省略,判读该用户在数据库是否已经存在省略
         String entryPassword= BPwdEncoderUtils.BCryptPassword(user.getPassword());
@@ -36,10 +32,17 @@ public class UserController {
 
     @ApiOperation(value = "登录", notes = "username和password为必选项")
     @PostMapping("/login")
-    @SysLogger("login")
-    public RespDTO login(@RequestParam String username , @RequestParam String password){
+//    @SysLogger("login")
+    public RespDTO login(@RequestBody UserLoginReq userLoginReq){
         //参数判读省略
-      return   userService.login(username,password);
+      return   userService.login(userLoginReq.getUsername(),userLoginReq.getPassword());
+    }
+
+    @ApiOperation(value = "小程序微信登录", notes = "小程序微信登陆")
+    @PostMapping("/wxlogin")
+    public RespDTO wxLogin(@RequestParam String code){
+        //参数判读省略
+        return RespDTO.onSuc(userService.wxLogin(code));
     }
 
     @ApiOperation(value = "根据用户名获取用户", notes = "根据用户名获取用户")

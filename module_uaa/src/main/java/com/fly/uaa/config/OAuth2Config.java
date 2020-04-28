@@ -15,13 +15,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFactory;
 
-/**
- * Description: <OAuth2Config><br>
- * Author:    mxdl<br>
- * Date:      2019/2/19<br>
- * Version:    V1.0.0<br>
- * Update:     <br>
- */
+
 @Configuration
 @EnableAuthorizationServer
 public class OAuth2Config extends AuthorizationServerConfigurerAdapter {

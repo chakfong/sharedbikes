@@ -18,13 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * Description: <WebSecurityConfig><br>
- * Author:    mxdl<br>
- * Date:      2019/2/19<br>
- * Version:    V1.0.0<br>
- * Update:     <br>
- */
 @Configuration
 class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 

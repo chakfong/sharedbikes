@@ -31,7 +31,20 @@ zuul:
       serviceId: bike-service
       sensitiveHeaders:
 
+    rental-service:
+      path: /rentalapi/**
+      serviceId: rental-service
+      sensitiveHeaders:
 
+    statistic-service:
+      path: /statisticapi/**
+      serviceId: statistic-service
+      sensitiveHeaders:
+
+    ticket-service:
+      path: /ticketapi/**
+      serviceId: ticket-service
+      sensitiveHeaders:
 
 server:
   port: 5000

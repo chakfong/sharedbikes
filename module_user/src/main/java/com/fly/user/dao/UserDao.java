@@ -16,4 +16,8 @@ public interface UserDao extends JpaRepository<User, Long> {
 
 	User findByUsername(String username);
 
+	User findUserByWxOpenIdIs(String wxOpenId);
+
+
+
 }

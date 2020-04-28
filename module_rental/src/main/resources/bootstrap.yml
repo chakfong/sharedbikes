@@ -1,12 +1,13 @@
 spring:
   application:
-    name: ticket-service
+    name: rental-service
   cloud:
     config:
-      uri: http://localhost:8769
+      uri: http://149.28.73.194:8769
       fail-fast: true
   profiles:
     active: pro
+
 #  zipkin:
 #    base-url: http://localhost:9411
 #

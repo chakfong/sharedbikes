@@ -7,13 +7,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 
-/**
- * Description: <><br>
- * Author:    mxdl<br>
- * Date:      2019/2/19<br>
- * Version:    V1.0.0<br>
- * Update:     <br>
- */
+
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients

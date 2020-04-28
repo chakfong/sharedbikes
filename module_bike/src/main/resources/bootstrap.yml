@@ -3,7 +3,7 @@ spring:
     name: bike-service
   cloud:
     config:
-      uri: http://localhost:8769
+      uri: http://149.28.73.194:8769
       fail-fast: true
   profiles:
     active: pro

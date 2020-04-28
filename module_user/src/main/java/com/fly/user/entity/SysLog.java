@@ -2,13 +2,6 @@ package com.fly.user.entity;
 
 import java.util.Date;
 
-/**
- * Description: <SysLog><br>
- * Author:    mxdl<br>
- * Date:      2019/2/19<br>
- * Version:    V1.0.0<br>
- * Update:     <br>
- */
 public class SysLog {
 
     private Long id;

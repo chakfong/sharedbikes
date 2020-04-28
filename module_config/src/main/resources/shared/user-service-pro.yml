@@ -28,3 +28,7 @@ spring:
 #    virtual-host: /
 
 foo: foo version 1
+
+wx:
+  appid: wx38eb9554c14e8fad
+  secret: 4caa9d52e3f644dfd3e04ee7398b931a

@@ -10,13 +10,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 
 
-/**
- * Description: <UserServiceClient><br>
- * Author:    mxdl<br>
- * Date:      2019/2/19<br>
- * Version:    V1.0.0<br>
- * Update:     <br>
- */
+
 @FeignClient(value = "user-service",fallback = UserServiceHystrix.class )
 public interface UserServiceClient {
 

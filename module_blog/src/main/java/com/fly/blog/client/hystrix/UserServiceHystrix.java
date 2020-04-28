@@ -5,13 +5,7 @@ import com.fly.blog.entity.User;
 import com.fly.common.dto.RespDTO;
 import org.springframework.stereotype.Component;
 
-/**
- * Description: <UserServiceHystrix><br>
- * Author:    mxdl<br>
- * Date:      2019/2/19<br>
- * Version:    V1.0.0<br>
- * Update:     <br>
- */
+
 @Component
 public class UserServiceHystrix implements UserServiceClient {
 
